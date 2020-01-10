@@ -5,6 +5,7 @@ class CashRegister
   @last_transaction = [] 
   
   def initialize(employee_discount = 0)
+    @employee_discount = employee_discount
     @total = 0 
   end 
   
