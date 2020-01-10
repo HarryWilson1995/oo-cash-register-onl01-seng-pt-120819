@@ -1,7 +1,6 @@
 class CashRegister
   attr_accessor :total, :items, :last_transaction, :employee_discount
   
-  @last_transaction = [] 
   
   def initialize(employee_discount = 0)
     @employee_discount = employee_discount
@@ -24,7 +23,7 @@ class CashRegister
       @items << title
     end
     @total += price*quantity
-    @last_transaction_amount = @total
+    @last_transaction = @total
     @total
   end
   
