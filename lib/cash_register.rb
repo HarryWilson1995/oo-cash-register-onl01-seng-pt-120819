@@ -4,7 +4,7 @@ class CashRegister
   @@items = []
   @last_transaction = [] 
   
-  def initialize(employee_discount = "")
+  def initialize(employee_discount = 0)
     @total = 0 
   end 
   
@@ -19,7 +19,7 @@ class CashRegister
   end 
   
   def apply_discount
-    if employee_discount != ""
+    if employee_discount != 0
       discounted_total = @total * 0.8 
       puts "After the discount, the total comes to $#{discounted_total}."
       @total = discounted_total
