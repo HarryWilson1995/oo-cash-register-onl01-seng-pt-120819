@@ -19,7 +19,7 @@ class CashRegister
   end 
   
   def apply_discount
-    if employee_discount != nil 
+    if employee_discount != ""
       discounted_total = @total * 0.8 
       puts "After the discount, the total comes to $#{discounted_total}."
       @total = discounted_total
